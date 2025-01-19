@@ -18,9 +18,9 @@ const Articel = require("./models/Articel")
 
 //create articel
 
-app.get("", async (req, res) => {
+app.get("/", async (req, res) => {
     const articel = await Articel.find()
-    res.render("index", { articel: articel })
+    res.render("index.ejs", { articel: articel })
 
 })
 
