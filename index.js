@@ -18,6 +18,12 @@ const Articel = require("./models/Articel")
 
 //create articel
 
+app.get("", async (req, res) => {
+    const articel = await Articel.find()
+    res.render("index", { articel: articel })
+
+})
+
 app.post("/articel", async (req, res) => {
 
     const newArticel = new Articel()
